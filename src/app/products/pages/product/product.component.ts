@@ -27,12 +27,17 @@ export class ProductComponent
     AfterViewChecked,
     OnDestroy
 {
-  constructor() {}
+  public isProductVisible: boolean = false;
+
+  constructor() {
+    console.log('constructor');
+  }
 
   ngOnInit(): void {
     console.log('ngOnInit');
   }
   ngOnChanges(changes: SimpleChanges): void {
+    console.log({ changes });
     console.log('ngOnChanges');
   }
   ngDoCheck(): void {
